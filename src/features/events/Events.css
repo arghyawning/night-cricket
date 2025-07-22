@@ -1,0 +1,219 @@
+.events-container {
+  padding: 20px;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.events-container h2 {
+  color: #3f51b5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-event-toggle-btn {
+  display: block;
+  width: auto;
+  margin: 0 auto 20px auto;
+  background-color: #007bff; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.create-event-toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.event-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.event-form h3 {
+  color: #3f51b5;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.event-form .form-group {
+  margin-bottom: 15px;
+}
+
+.event-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.event-form input[type="text"],
+.event-form input[type="date"],
+.event-form input[type="time"],
+.event-form textarea {
+  width: calc(100% - 22px); /* Account for padding and border */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.event-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px;
+}
+
+.event-form button[type="submit"] {
+  background-color: #28a745; /* Green */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.event-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.event-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  border-left: 5px solid #3f51b5; /* Accent color */
+}
+
+.event-item h4 {
+  color: #3f51b5;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.event-item p {
+  margin-bottom: 5px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.event-item p strong {
+  color: #333;
+}
+
+.rsvps-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #eee;
+}
+
+.rsvp-count {
+  margin: 0 5px;
+  font-weight: bold;
+}
+.rsvp-count.going { color: #28a745; }
+.rsvp-count.maybe { color: #ffc107; }
+.rsvp-count.not-going { color: #dc3545; }
+
+
+.rsvp-actions {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+  justify-content: center; /* Center buttons */
+}
+
+.rsvp-button {
+  background-color: #6c757d; /* Gray for default */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-button:hover:not(.active) {
+  background-color: #5a6268;
+}
+
+.rsvp-button.active {
+  background-color: #28a745; /* Green for 'Going' active */
+  cursor: default; /* No hover effect for active */
+  opacity: 0.9;
+}
+
+/* Specific active styles for different types (can be adjusted) */
+.rsvp-button.active:first-child { /* Going button */
+    background-color: #28a745;
+}
+.rsvp-button.active:nth-child(2) { /* Maybe button */
+    background-color: #ffc107;
+    color: #333; /* Darker text for yellow */
+}
+.rsvp-button.active:nth-child(3) { /* Not Going button */
+    background-color: #dc3545;
+}
+
+
+.rsvp-button.cancel-rsvp {
+  background-color: #f44336; /* Red for cancel */
+}
+
+.rsvp-button.cancel-rsvp:hover {
+  background-color: #d32f2f;
+}
+
+/* Flexbox to align title and button on the same line */
+.event-item .event-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.event-item .event-header-row h4 {
+  margin: 0; /* Remove default margin from h4 to align better */
+  flex-grow: 1; /* Allows h4 to take up available space */
+}
+
+.delete-event-button {
+  background-color: #dc3545; /* Red for delete */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease;
+  margin-left: 15px; /* Space from the title */
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.delete-event-button:hover {
+  background-color: #c82333;
+}
