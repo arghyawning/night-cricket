@@ -1,16 +1,16 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // For database
-import { getStorage } from "firebase/storage";   // For gallery
-import { getAuth } from "firebase/auth";       // For authentication
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCbEKcEe9IuWlFt1Ro3qXVAo-vF_o97-sQ",
-  authDomain: "night-cricket-39bf7.firebaseapp.com",
-  projectId: "night-cricket-39bf7",
-  storageBucket: "night-cricket-39bf7.firebasestorage.app",
-  messagingSenderId: "1007777294523",
-  appId: "1:1007777294523:web:e34c557fa3ffd92004a19e",
-  measurementId: "G-4SEKQN55KT"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
